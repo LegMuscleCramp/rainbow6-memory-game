@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rainbow 6 Siege Memory Game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css"/>
+  <link rel="shortcut icon" type="image/x-icon" href="img/r6s.ico"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="scripts.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Operation: Memory Game</h1>
+    <form onsubmit="startGame(); return false;">
+      <div class="dropdown">
+        <p>How many pairs of pictures?</p>
+        <select id="numberPairs">
+          <option>8</option>
+          <option>10</option>
+          <option>12</option>
+        </select>
+      </div>
+      <div class="dropdown">
+        <p>How many seconds?</p>
+        <select id="numberSeconds">
+          <option>3</option>
+          <option>5</option>
+          <option>8</option>
+        </select>
+      </div>
+      <br>
+      <input id="newGame" name="submit" type="submit" value="start"></input>
+    </form>
+    <p id="instructions">This game will test your memory.<br/><br/>
+      To begin, choose how many pairs of pictures you would like to memorize.
+      Next, choose how many seconds you would like to see the images before
+      they flip back over. The shorter the time, the harder the game.
+      You will have a limited amount of time to match all the images.<br/><br/>
+      Click "Start" when you are ready to begin.
+      You may also begin a new game at any time by clicking the "New game" button.
+    </p>
+    <p id="countdown"></p>
+    <div id="tableContainer" class="table-container">
+    </div>
+  </div>
+</body>
+</html>
